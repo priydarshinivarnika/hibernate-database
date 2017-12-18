@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.common.details.SkillData" table="one">
+		<id name="skillId">
+			<generator class="assigned"></generator>
+		</id>
+
+		<property name="skillId"></property>
+		<column name="Skill Id" />
+		<property name="empSkill"></property>
+		<column name="Emp Skill" />
+
+
+	</class>
+
+</hibernate-mapping>  
