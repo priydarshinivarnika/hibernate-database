@@ -4,14 +4,9 @@
  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.common.details.SkillData" table="SKILL">
+	<class name="com.common.details.EmployeesSkill" table="EMP_SKILL">
 		<meta attribute="class-description">This class contains the skill detail.</meta>
-		<id name="skillId" type="int" column="skillId">
-			<generator class="increment"></generator>
-		</id>
-		
-		
+		<property name="empId" column="Emp_Id" type="string" />
 		<property name="skillId" column="Skill_Id" type="string" />
-		<property name="skillName"  column="Skill_Name" type="string" />
 	</class>
-</hibernate-mapping>
+</hibernate-mapping>  

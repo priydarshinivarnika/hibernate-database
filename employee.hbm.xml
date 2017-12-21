@@ -4,19 +4,15 @@
  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.common.details.EmployeeData" table="one">
-		<id name="empId">
-			<generator class="assigned"></generator>
+	<class name="com.common.details.EmployeeData" table="EMP">
+		<meta attribute="class-description">This class contains the employee detail.</meta>
+		<id name="empId" type="int" column="empId">
+			<generator class="increment"></generator>
 		</id>
 
-		<property name="empFirstName"></property><column name="Employee FirstName" />
-		<property name="empLastName"></property><column name="Employee LastName" />
-		<property name="empDepartment"></property><column name="Employee Department" />
-
-		<!-- <component name="skillData">
-			<property name="skillId"></property><column name="Skill Id" />
-			<property name="skillName"></property><column name="Skill Name" />
-		</component> -->
+		<property name="empFirstName" column="Employee_FirstName" type="string" />
+		<property name="empLastName" column="Employee_LastName" type="string" />
+		<property name="empDepartment" column="Employee_Department" type="string" />
 
 	</class>
 
