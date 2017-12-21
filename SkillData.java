@@ -5,11 +5,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Skill")
+@Table(name = "SKILL")
 public class SkillData {
 
 	private int skillId;
-	private String empSkill;
+	private String skillName;
 
 	@Id
 	public int getSkillId() {
@@ -20,12 +20,12 @@ public class SkillData {
 		this.skillId = skillId;
 	}
 
-	public String getEmpSkill() {
-		return empSkill;
+	public String getSkillName() {
+		return skillName;
 	}
 
-	public void setEmpSkill(String empSkill) {
-		this.empSkill = empSkill;
+	public void setSkillName(String skillName) {
+		this.skillName = skillName;
 	}
 
 }

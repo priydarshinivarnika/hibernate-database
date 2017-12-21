@@ -1,19 +1,22 @@
 package com.common.details;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Emp")
+@Table(name = "EMP")
 public class EmployeeData {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int empId;
-	private String empFirstName, empLastName, empSkill, empDepartment;
+	private String empFirstName, empLastName, empDepartment;
 	
 	
 
-	@Id
 	public int getEmpId() {
 		return empId;
 	}
@@ -38,25 +41,10 @@ public class EmployeeData {
 		this.empLastName = empLastName;
 	}
 	
-	  public String getEmpSkill() { return empSkill; }
-	 
-	  public void setEmpSkill(String empSkill) { this.empSkill = empSkill; }
-	 
-
-	public String getEmpDepartment() {
+	 	public String getEmpDepartment() {
 		return empDepartment;
 	}
 
 	public void setEmpDepartment(String empDepartment) {
 		this.empDepartment = empDepartment;
-	}
-	/*private SkillData skilldata = new SkillData();
-
-	public SkillData getSkilldata() {
-		return skilldata;
-	}
-
-	public void setSkilldata(SkillData skilldata) {
-		this.skilldata = skilldata;
-	}*/
-}
+	}}
